@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="config.css">
+
+  <script defer src="./index.js"></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <main>
+    <article class="active">
+      <picture>
+        <!-- <source media="(min-width: 1024px)" srcset="./assets/images/illustration-sign-up-desktop.svg"> -->
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+      </picture>
+      <div class="card-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form id="email-subscription-form" novalidate>
+          <div class="label-container">
+            <label for="email">Email address</label>
+            <span class="error-message">Valid email required</span>
+          </div>
+          <input
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="email@company.com"
+            required
+          >
+          <button type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </article>
+
+    <article class="success">
+      <div class="card-content">
+        <img src="./assets/images/icon-success.svg" alt="Success Icon" width="55px" height="55px">
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <strong></strong>. Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button type="button">
+        Dismiss message
+      </button>
+    </article>
+  </main>
+</body>
+</html>

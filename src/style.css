@@ -1,0 +1,172 @@
+body {
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-slate-grey);
+  font-size: 1rem;
+}
+
+picture {
+  display: contents;
+}
+
+article {
+  display: none;
+  max-width: 100%;
+}
+
+article.active {
+  display: initial;
+}
+
+article img {
+  width: 100%;
+}
+
+div.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 2rem 1.5rem;
+}
+
+div.card-content ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  gap: 1rem;
+}
+
+div.card-content li {
+  display: flex;
+  gap: 1.5rem;
+}
+
+div.card-content li::before {
+  content: url('./assets/images/icon-list.svg');
+}
+
+div.card-content h1 {
+  font-size: 2.4rem;
+  font-family: 'Roboto' sans-serif;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+}
+
+div.card-content form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+div.card-content form div.label-container {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+div.card-content form label {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+div.card-content form span.error-message {
+  display: none;
+  font-size: .8rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+div.card-content form input {
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: .5rem;
+  font-size: 1rem;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+div.card-content form input::placeholder {
+  color: var(--grey);
+}
+
+div.card-content form.error-state span {
+  display: initial;
+}
+
+div.card-content form.error-state input {
+  border: 1px solid var(--primary-color);
+  background-color: hsla(4, 100%, 67%, .2);
+  color: var(--primary-color);
+}
+
+div.card-content form.error-state input:focus-visible {
+  outline: 1.2px solid var(--primary-color);
+}
+
+article button {
+  margin-top: 1rem;
+  width: 100%;
+  background: var(--dark-slate-grey);
+  border-radius: .5rem;
+  padding: 1.2rem 0;
+
+  font-size: 1rem;
+  color: var(--white);
+  animation: button-hover-out .3s ease;
+}
+
+article button:hover{
+  background: linear-gradient(35deg, rgba(255,82,123,1) 0%, rgba(255,96,91,1) 65%);
+  box-shadow: rgba(255,96,91,1) 0 15px 40px -5px;
+  animation: button-hover .3s ease;
+}
+
+@keyframes button-hover-out {
+  from {
+    background: linear-gradient(35deg, rgba(255,82,123,1) 0%, rgba(255,96,91,1) 65%);
+    box-shadow: rgba(255,96,91,1) 0 15px 40px -5px;
+  }
+  to {
+    background: var(--dark-slate-grey);
+  }
+}
+
+@keyframes button-hover-in {
+  from {
+    background: var(--dark-slate-grey);
+  }
+  to {
+    box-shadow: rgba(255,96,91,1) 0 15px 40px -5px;
+    background: linear-gradient(35deg, rgba(255,82,123,1) 0%, rgba(255,96,91,1) 65%);
+  }
+}
+
+article.success.active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  max-width: 466px;
+}
+
+article.success div.card-content img {
+  width: 55px;
+  height: 55px;
+}
+
+article.success div.card-content {
+  padding: 0;
+  margin: 0;
+  padding-top: 9rem;
+}
