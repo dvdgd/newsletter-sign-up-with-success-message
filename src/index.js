@@ -50,9 +50,10 @@ const onDismissMessage = (e) => {
   document.querySelector('article:not(.success)').classList.add('active');
 }
 
-//validate the email on fileld change 
 document.getElementById('email').addEventListener('input', () => {
-  validateEmail();
+  setTimeout(() => {
+    validateEmail();
+  }, 700);
 });
 
 document.getElementById('email-subscription-form').addEventListener('submit', handleEmailSubmit);
