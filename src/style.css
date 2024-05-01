@@ -180,7 +180,11 @@ article.success div.card-content {
   }
 
   article div.card-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  article div.card-content {
+    max-width: 445px;
   }
 
   article.active {
@@ -208,7 +212,6 @@ article.success div.card-content {
 
   article.success.active h1 {
     margin-top: .5rem;
-    font-size: 3.5rem;
   }
 
   article.success.active div.card-content img {
