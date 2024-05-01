@@ -118,7 +118,8 @@ article button {
   animation: button-hover-out .3s ease;
 }
 
-article button:hover{
+article button:hover, 
+article button:focus-visible {
   background: linear-gradient(35deg, rgba(255,82,123,1) 0%, rgba(255,96,91,1) 65%);
   box-shadow: rgba(255,96,91,1) 0 15px 40px -5px;
   animation: button-hover .3s ease;
